@@ -12,9 +12,21 @@ code {
     monospace;
 }
 
-.movie{
-  border: 2px solid black;
-  border-radius: 20px;
-  margin: 1rem;
-  padding: 1rem;
+.movie-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
+.movie {
+  border: 1px solid #999;
+  margin: 1rem auto;
+  padding: 1rem;
+  box-sizing: border-box;
+  flex: 0 0 24%;
+}
+.badge {
+  background-color: rgb(19, 190, 28);
+  color: #fff;
+  font-weight: bold;
+}
+
