@@ -1,35 +1,18 @@
 import React from "react";
+import moviesArr from "../data/movies.json"
 
 
 
 function Main() {
 
-    const moviesArr = [
-        {
-            id: 1,
-            title: "Billy Elliot",
-            rating: 9
-        },
-        {
-            id: 2,
-            title: "Forest Gump",
-            rating: 9
-        },
-        {
-            id: 3,
-            title: "The Lion King",
-            rating: 10
-        }
-
-    ];
-
     return (
         <>
             {moviesArr.map((movie, index) => {
                 return (
-                    <div key={movie.id}>
+                    <div className="movie" key={movie.id}>
                         <h2>Title: {movie.title}</h2>
-                        Rating: {movie.rating}
+                        <p>Year: {movie.year}</p>
+                        <p>Rating: {movie.rating}</p>
                     </div>
                 );
             })}
