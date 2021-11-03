@@ -1,21 +1,22 @@
 import React from "react";
 import moviesArr from "../data/movies.json"
+import Movie from "./Movie"
 
 
 
 function Main() {
 
-    return (
+    return (  
         <>
-            {moviesArr.map((movie, index) => {
-                return (
-                    <div className="movie" key={movie.id}>
-                        <h2>Title: {movie.title}</h2>
-                        <p>Year: {movie.year}</p>
-                        <p>Rating: {movie.rating}</p>
-                    </div>
-                );
-            })}
+    {moviesArr.map((movie)=>{
+      return  <Movie  
+        key={movie.id}                                 //also valid {...movie}
+          title= {movie.title}
+          year= {movie.year}
+          rating={movie.rating}
+      /> ;
+    })}
+            
         </>
     );
 };
