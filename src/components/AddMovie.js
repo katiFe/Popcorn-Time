@@ -33,7 +33,8 @@ import './AddMovie.css';
 
 
     handleFromSubmit =((event)=>{
-      event.preventDefault()
+      // need it to store the new movies
+      event.preventDefault() 
       console.log("excecuting this function")
 
       const movieInfo ={
@@ -42,9 +43,14 @@ import './AddMovie.css';
         rating: this.state.rating
       }
 
-
-
       this.props.addMovieHandler(movieInfo);
+
+//for resetting the form to blank
+      this.setState({
+        title: "",
+        year: "",
+        rating: ""
+      })
     })
 
 
