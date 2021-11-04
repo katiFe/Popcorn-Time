@@ -1,7 +1,7 @@
 import React from "react";
 import moviesArr from "../data/movies.json"
 import Movie from "./Movie"
-
+import AddMovie from "./AddMovie";
 
 
 
@@ -29,6 +29,10 @@ render(){
             <div className="controls">
                 <button onClick={this.renderClassicsOnly}>Display only classics</button>
             </div>
+
+        
+            <AddMovie/>
+
             <div className="movie-list">
                 {this.state.moviesToDisplay.map((movie) => {
                     return <Movie
