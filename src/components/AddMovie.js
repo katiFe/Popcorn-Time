@@ -43,8 +43,8 @@ import './AddMovie.css';
       }
 
 
-      
-      this.props.addMovieHandler();
+
+      this.props.addMovieHandler(movieInfo);
     })
 
 
