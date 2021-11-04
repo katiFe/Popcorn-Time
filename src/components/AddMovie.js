@@ -31,11 +31,30 @@ import './AddMovie.css';
         this.setState({[nameOfTheInput] : event.target.value})
     })
 
+
+    handleFromSubmit =((event)=>{
+      event.preventDefault()
+      console.log("excecuting this function")
+
+      const movieInfo ={
+        title: this.state.title,
+        year: this.state.year,
+        rating: this.state.rating
+      }
+
+
+      
+      this.props.addMovieHandler();
+    })
+
+
     render() {
         return (
             <div className="AddMovie">
             <h2>Add a new Movie</h2>
-              <form>
+
+          
+              <form onSubmit={this.handleFromSubmit}>
                     <label>
                     Title:
                   <input 
