@@ -14,7 +14,13 @@ class Main extends React.Component {
     };
 
 createMovie = (newMovieDetails)=>{
-    console.log(newMovieDetails)
+    // console.log(newMovieDetails)
+//adding key
+    newMovieDetails.id = this.state.moviesToDisplay.length + 1;
+//add this info in order to be equal with the info from all other movies
+    newMovieDetails.genre = [];
+    newMovieDetails.imageURL = "";
+
     this.setState((prevState, props)=>{
         const newListOfMovies = [newMovieDetails,...prevState.moviesToDisplay ];
         return {moviesToDisplay: newListOfMovies}
